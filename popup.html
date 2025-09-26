@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Playlist Search</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            width: 350px;
+            padding: 16px;
+            margin: 0;
+            background: #f9f9f9;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        h3 {
+            margin: 0 0 8px 0;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .search-container {
+            position: relative;
+            margin-bottom: 16px;
+        }
+        
+        #searchInput {
+            width: 100%;
+            padding: 10px 40px 10px 12px;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        
+        #searchInput:focus {
+            border-color: #ff0000;
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            pointer-events: none;
+        }
+        
+        .clear-btn {
+            position: absolute;
+            right: 35px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 16px;
+            color: #666;
+            cursor: pointer;
+            padding: 2px;
+            display: none;
+        }
+        
+        .clear-btn:hover {
+            color: #333;
+        }
+        
+        .stats {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        
+        #status {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        #videoList {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .video-item {
+            background: white;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        
+        .video-item.hidden {
+            display: none;
+        }
+        
+        .video-link {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 8px;
+        }
+        
+        .video-title {
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 4px;
+            word-wrap: break-word;
+        }
+        
+        .video-meta {
+            font-size: 11px;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .video-type {
+            background: #ff0000;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+        }
+        
+        .no-results-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+        
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 1px 2px;
+            border-radius: 2px;
+        }
+        
+        /* Scrollbar styling */
+        #videoList::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        #videoList::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+        
+        #videoList::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+        
+        #videoList::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>YouTube Playlist Search</h3>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search videos..." autocomplete="off">
+        <button class="clear-btn" id="clearBtn" title="Clear search">×</button>
+        <span class="search-icon">🔍</span>
+    </div>
+    
+    <div class="stats" id="stats"></div>
+    <div id="status">Loading videos...</div>
+    <ul id="videoList"></ul>
+
+    <script src="popup.js"></script>
+</body>
+</html>
