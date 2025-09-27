@@ -3,6 +3,10 @@
 A lightweight Chrome extension that **instantly finds and searches all videos** on any webpage.  
 Perfect for discovering videos across **any website** — social media, news sites, educational platforms, and more.
 
+<p align="center"> 
+<img src="screenshots/Searching.png" alt="Video Finder Extension Preview" width="600"> 
+</p>
+
 ---
 
 ## ✨ Features
@@ -13,6 +17,11 @@ Perfect for discovering videos across **any website** — social media, news sit
 - 📱 **Universal Support** – Works on any website with video content.  
 - 🔗 **Direct Access** – Click any result to open the video directly.  
 - 🚫 **No External APIs** – Runs entirely in your browser, no data sent anywhere.  
+
+
+<p align="center"> 
+<img src="screenshots/Searched.png" alt="Video Finder Extension Preview" width="600"> 
+</p>
 
 ---
 
@@ -106,6 +115,7 @@ video-finder-extension/
 
 Planned improvements to make video discovery even better:
 
+- [ ] **Optimization** – Optimize the extension for slower machines 
 - [ ] **Video Thumbnails** – Show preview images in search results
 - [ ] **Duration Display** – Show video length when available
 - [ ] **Advanced Filters** – Filter by video type, duration, or source
