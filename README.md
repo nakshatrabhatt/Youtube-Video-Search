@@ -18,16 +18,19 @@ Perfect for discovering videos across **any website** — social media, news sit
 
 ## Screenshots
 
-<p align="center" style="display: flex; justify-content: center; gap: 20px;">
-  <span style="display: flex; flex-direction: column; gap: 10px; width: 45%;">
-    <img src="screenshots/fetch-vids.png" width="100%" />
-    <img src="screenshots/search.png" width="100%" />
-  </span>
+<table align="center">
+  <tr>
+    <td align="center" width="45%">
+      <img src="screenshots/fetch-vids.png" width="100%"><br>
+      <img src="screenshots/search.png" width="100%">
+    </td>
+    <td align="center" width="45%">
+      <img src="screenshots/display-vids.png" width="100%">
+    </td>
+  </tr>
+</table>
 
-  <span style="display: inline-block; width: 45%;">
-    <img src="screenshots/fetch-vids.png" width="100%" />
-  </span>
-</p>
+
 
 ---
 
